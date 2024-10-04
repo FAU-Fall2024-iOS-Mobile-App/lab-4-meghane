@@ -14,11 +14,19 @@ struct ContentView: View {
             ForEach(0..<cards.count, id: \.self) { index in
                 CardView(card: cards[index])
                     .rotationEffect(.degrees(Double(cards.count - 1 - index) * -5))
+                CardView(card: cards[index], onSwipedLeft: { // <-- Add swiped left property
+                    cards.remove(at: index) // <-- Remove the card from the cards array
+                }, onSwipedRight: { // <-- Add swiped right property
+                    cards.remove(at: index) // <-- Remove the card from the cards array
+                })
             }
         }
         .frame(width: 300, height: 500)
+        .animation(.bouncy, value: cards)
     }
 }
+
+
 #Preview {
     ContentView()
 }
