@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var cards: [Card] = Card.mockedCards
+    @State private var createCardViewPresented = false
     @State private var cardsToPractice: [Card] = [] // <-- Store cards removed from cards array
     @State private var cardsMemorized: [Card] = [] // <--
     
@@ -37,12 +38,24 @@ struct ContentView: View {
                 }, onSwipedRight: {
                     let removedCard = cards.remove(at: index) // <-- Get the removed card
                     cardsMemorized.append(removedCard) // <-- Add removed card to memorized cards array
+                    
                 })
             }
         }
         .frame(width: 300, height: 500)
         .animation(.bouncy, value: cards)
+        .sheet(isPresented: $createCardViewPresented, content: {
+            Text("Create cards here...")
+        })
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // <-- Force the ZStack frame to expand as much as possible (the whole screen in this case)
+        .overlay(alignment: .topTrailing) {
+            Button("Add Flashcard", systemImage: "plus") {
+                createCardViewPresented.toggle()
+            }
+            .padding(.trailing)
+        }
     }
+    
 }
 
 
