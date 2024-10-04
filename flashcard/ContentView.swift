@@ -45,7 +45,9 @@ struct ContentView: View {
         .frame(width: 300, height: 500)
         .animation(.bouncy, value: cards)
         .sheet(isPresented: $createCardViewPresented, content: {
-            Text("Create cards here...")
+            CreateFlashcardView { card in
+                cards.append(card)
+            }
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity) // <-- Force the ZStack frame to expand as much as possible (the whole screen in this case)
         .overlay(alignment: .topTrailing) {

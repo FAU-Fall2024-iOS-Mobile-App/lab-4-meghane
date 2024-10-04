@@ -15,6 +15,8 @@
 		0D2FE3952CAF54C700584F71 /* flashcardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FE3942CAF54C700584F71 /* flashcardUITests.swift */; };
 		0D2FE3972CAF54C700584F71 /* flashcardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FE3962CAF54C700584F71 /* flashcardUITestsLaunchTests.swift */; };
 		0D2FE3A42CAF63BF00584F71 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FE3A32CAF63BF00584F71 /* CardView.swift */; };
+		0D2FE3A62CAF80CC00584F71 /* CreateFlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FE3A52CAF80CC00584F71 /* CreateFlashcardView.swift */; };
+		0D2FE3A82CAF816900584F71 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2FE3A72CAF816900584F71 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		0D2FE3942CAF54C700584F71 /* flashcardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flashcardUITests.swift; sourceTree = "<group>"; };
 		0D2FE3962CAF54C700584F71 /* flashcardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flashcardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0D2FE3A32CAF63BF00584F71 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0D2FE3A52CAF80CC00584F71 /* CreateFlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlashcardView.swift; sourceTree = "<group>"; };
+		0D2FE3A72CAF816900584F71 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				0D2FE3782CAF54C500584F71 /* flashcard */,
-				0D2FE3892CAF54C700584F71 /* flashcardTests */,
-				0D2FE3932CAF54C700584F71 /* flashcardUITests */,
 				0D2FE3772CAF54C500584F71 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,10 +98,14 @@
 		0D2FE3782CAF54C500584F71 /* flashcard */ = {
 			isa = PBXGroup;
 			children = (
+				0D2FE3A72CAF816900584F71 /* Launch Screen.storyboard */,
 				0D2FE37B2CAF54C500584F71 /* ContentView.swift */,
+				0D2FE3A52CAF80CC00584F71 /* CreateFlashcardView.swift */,
 				0D2FE3A32CAF63BF00584F71 /* CardView.swift */,
 				0D2FE3792CAF54C500584F71 /* flashcardApp.swift */,
 				0D2FE37D2CAF54C600584F71 /* Assets.xcassets */,
+				0D2FE3892CAF54C700584F71 /* flashcardTests */,
+				0D2FE3932CAF54C700584F71 /* flashcardUITests */,
 				0D2FE37F2CAF54C600584F71 /* Preview Content */,
 			);
 			path = flashcard;
@@ -234,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2FE3A82CAF816900584F71 /* Launch Screen.storyboard in Resources */,
 				0D2FE3812CAF54C600584F71 /* Preview Assets.xcassets in Resources */,
 				0D2FE37E2CAF54C600584F71 /* Assets.xcassets in Resources */,
 			);
@@ -263,6 +270,7 @@
 				0D2FE37C2CAF54C500584F71 /* ContentView.swift in Sources */,
 				0D2FE3A42CAF63BF00584F71 /* CardView.swift in Sources */,
 				0D2FE37A2CAF54C500584F71 /* flashcardApp.swift in Sources */,
+				0D2FE3A62CAF80CC00584F71 /* CreateFlashcardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,14 +431,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"flashcard/Preview Content\"";
+				DEVELOPMENT_TEAM = Y5LRU3BP47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,14 +462,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"flashcard/Preview Content\"";
+				DEVELOPMENT_TEAM = Y5LRU3BP47;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
