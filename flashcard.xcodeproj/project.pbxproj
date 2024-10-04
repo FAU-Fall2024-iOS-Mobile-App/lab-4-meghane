@@ -14,6 +14,7 @@
 		0D2FE38B2CAF54C700584F71 /* flashcardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FE38A2CAF54C700584F71 /* flashcardTests.swift */; };
 		0D2FE3952CAF54C700584F71 /* flashcardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FE3942CAF54C700584F71 /* flashcardUITests.swift */; };
 		0D2FE3972CAF54C700584F71 /* flashcardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FE3962CAF54C700584F71 /* flashcardUITestsLaunchTests.swift */; };
+		0D2FE3A42CAF63BF00584F71 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FE3A32CAF63BF00584F71 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0D2FE3902CAF54C700584F71 /* flashcardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flashcardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D2FE3942CAF54C700584F71 /* flashcardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flashcardUITests.swift; sourceTree = "<group>"; };
 		0D2FE3962CAF54C700584F71 /* flashcardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flashcardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0D2FE3A32CAF63BF00584F71 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,9 @@
 		0D2FE3782CAF54C500584F71 /* flashcard */ = {
 			isa = PBXGroup;
 			children = (
-				0D2FE3792CAF54C500584F71 /* flashcardApp.swift */,
 				0D2FE37B2CAF54C500584F71 /* ContentView.swift */,
+				0D2FE3A32CAF63BF00584F71 /* CardView.swift */,
+				0D2FE3792CAF54C500584F71 /* flashcardApp.swift */,
 				0D2FE37D2CAF54C600584F71 /* Assets.xcassets */,
 				0D2FE37F2CAF54C600584F71 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D2FE37C2CAF54C500584F71 /* ContentView.swift in Sources */,
+				0D2FE3A42CAF63BF00584F71 /* CardView.swift in Sources */,
 				0D2FE37A2CAF54C500584F71 /* flashcardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
