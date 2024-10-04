@@ -12,6 +12,7 @@ struct CardView: View {
     let card: Card
     var onSwipedLeft: (() -> Void)? // <-- Add closures to be called when user swipes left or right
     var onSwipedRight: (() -> Void)? // <--
+    
     @State private var isShowingQuestion = true
     @State private var offset: CGSize = .zero // <-- A state property to store the offset
     private let swipeThreshold: Double = 200 // <--- Define a swipeThreshold constant top level
@@ -87,9 +88,11 @@ struct Card:Equatable {
         ]
 }
 
+
 #Preview {
     CardView(card: Card(
             question: "What is the most popular cat breed in the United States?",
             answer: "The Domestic Shorthair"))
+    
 }
 
